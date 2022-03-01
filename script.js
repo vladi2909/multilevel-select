@@ -27,8 +27,6 @@ function updateSelect(countS) {
     const sel = document.getElementById(String(nextSelect));
     const allSel = document.querySelectorAll("select");
 
-    console.log(sel);
-
     sel.innerHTML = "";
     
     for (let i = 0; i < listOptions2.length; i++) {
@@ -40,11 +38,12 @@ function updateSelect(countS) {
 
     for (let i = nextSelect; i < allSel.length; i++) {
         allSel[i].innerHTML = "";
-        console.log(allSel[i]);
+        count--;
+        listSelects.pop();
+        allSel[i].remove();
+        console.log(count);
+        
     }
-
-
-
 
 
     
