@@ -1,9 +1,7 @@
 const selectWrap = document.querySelector(".select-wrap");
 let count = 1;
 
-selectWrap.addEventListener("change", (e) => {
-
-    const s = document.getElementById(`select_${listSelects.length}`);
+selectWrap.addEventListener("change", function(e) {
     
 
     if (Number(e.target.id) >= count) {
@@ -27,6 +25,10 @@ function updateSelect(countS) {
     nextSelect = Number(countS) + 1;
 
     const sel = document.getElementById(String(nextSelect));
+    const allSel = document.querySelectorAll("select");
+
+    console.log(sel);
+
     sel.innerHTML = "";
     
     for (let i = 0; i < listOptions2.length; i++) {
@@ -35,6 +37,13 @@ function updateSelect(countS) {
         option.text = listOptions2[i];
         sel.add(option);
     }
+
+    for (let i = nextSelect; i < allSel.length; i++) {
+        allSel[i].innerHTML = "";
+        console.log(allSel[i]);
+    }
+
+
 
 
 
