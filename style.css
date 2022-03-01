@@ -1,0 +1,11 @@
+.select-wrap {
+    max-width: 300px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+select {
+    margin: 10px 0;
+    padding: 10px;
+} 
